@@ -1,6 +1,13 @@
 package facens.arquiteturaweb.aula3.modelo;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "aluno")
 public class Aluno {
+    @Id
     private Long id;
     private String nome;
     private String curso;
@@ -17,7 +24,10 @@ public class Aluno {
         this.sexo = sexo;
     }
 
-    // Getters e Setters
+    public Aluno() {
+    }
+
+    // Getters e Setters (exemplo)
     public Long getId() {
         return id;
     }
@@ -66,4 +76,3 @@ public class Aluno {
         this.sexo = sexo;
     }
 }
-
